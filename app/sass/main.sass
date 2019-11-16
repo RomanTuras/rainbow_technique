@@ -17,6 +17,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
+	background-color: $gray-color
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -32,7 +33,10 @@ body
 	&.img-width
 		width: 100%
 
-.main-section
+.container
+	background-color: white
+
+#main-section
 	background-image: url('../img/_src/Screen-1-bgr-min.jpg')
 	background-position: center
 	background-repeat: no-repeat
@@ -48,18 +52,6 @@ body
 		width: 20px
 		height: 52px
 		margin: 2px 13px 0 0
-	a, .btn
-		font-size: 27px
-		font-family: $font-bold
-		color: white
-		background: $red-color
-		padding: 12px 50px 7px 50px
-		border-radius: 10px
-		text-decoration: none
-		display: inline-block
-		margin: 17px 0 15px 0
-		&:hover
-			background: $accent
 	.flex
 		display: flex
 		align-items: flex-end
@@ -68,6 +60,18 @@ body
 		img
 			margin-left: 55px
 		
+#you-can
+	h2
+		padding-top: 55px
+		padding-bottom: 55px
+	p
+		text-align: left
+		margin-top: 25px
+	.img-you-can
+		margin-left: 45px
+	.img-why
+		margin-left: -27px
+		margin-bottom: 45px
 
 .color-accent
 	color: $accent
@@ -90,8 +94,27 @@ h1
 		font-size: 53px
 		color: $text
 
+h2
+	font-size: 28px
+	font-family: $font-bold
+
 b, strong
 	font-weight: bold
+
+a, .btn
+	font-size: 27px
+	font-family: $font-bold
+	color: white
+	background: $red-color
+	padding: 12px 50px 7px 50px
+	border-radius: 10px
+	text-decoration: none
+	display: inline-block
+	margin: 17px 0 15px 0
+	&:hover
+		background: $accent
+		text-decoration: none
+		color: white
 
 
 
