@@ -97,6 +97,31 @@ body
 	.second-row
 		left: -40px
 
+#what-awaits-section
+	padding: 0
+	background-image: url('../img/_src/Screen-4-bgr-min.jpg')
+	background-position: center
+	background-repeat: no-repeat
+	width: auto
+	height: 1019px
+	h2
+		text-transform: uppercase
+		margin-bottom: 44px
+		font-size: 28px
+	img
+		margin-left: 25px
+		margin-bottom: 30px
+	ul
+		list-style: none
+		counter-reset: my-counter
+		margin-bottom: 54px
+	li
+		margin-bottom: 24px
+		counter-increment: my-counter
+		&:before
+			content: counter(my-counter) ". "
+			font-family: $din-alternate-bold
+
 .color-accent
 	color: $accent
 
@@ -106,6 +131,9 @@ body
 
 .text-center
 	text-align: center
+
+.padding-none
+	padding: 0
 
 h1
 	font-size: 62px
