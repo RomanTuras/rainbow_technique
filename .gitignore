@@ -3,6 +3,8 @@ page.php
 /dist/
 /.git/
 /app/css/
+/app/img/@1x/
+/app/img/@2x/
 /sources/
 /**/_backstage
 /**/package-lock.json
