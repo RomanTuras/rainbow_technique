@@ -191,6 +191,77 @@ body
 		margin-top: 97px
 		z-index: 100
 
+#reviews-section
+	.carousel-item
+		min-width: 350px
+		min-height: 350px
+		border: solid 2px black
+	.slick-prev
+		left: -1px
+		display: inline-block
+		// overflow: visible
+		font-size: 0
+		line-height: 0
+		position: absolute
+		top: 50%
+		width: 20px
+		height: 20px
+		padding: 0
+		transform: translate(0, -50%)
+		cursor: pointer
+		color: transparent
+		border: none
+		outline: none
+		background: transparent
+		&:before
+			content: '←'
+			font-family: 'slick'
+			font-size: 20px
+			line-height: 1
+			opacity: .75
+			color: black
+	.slick-next
+		right: -1px
+		display: inline-block
+		// overflow: visible
+		font-size: 0
+		line-height: 0
+		position: absolute
+		top: 50%
+		width: 20px
+		height: 20px
+		padding: 0
+		transform: translate(0, -50%)
+		cursor: pointer
+		color: transparent
+		border: none
+		outline: none
+		background: transparent
+		&:before
+			content: '→'
+			font-family: 'slick'
+			font-size: 20px
+			line-height: 1
+			opacity: .75
+			color: black
+	.slick-dots
+		display: flex
+		justify-content: center
+		list-style-type: none
+		li[class="slick-active"]
+			button
+				background: black
+		button
+			background: $gray-color
+			border: none
+			border-radius: 50%
+			font-size: 0
+			height: 15px
+			width: 15px
+			margin: 5px
+			&:focus
+				outline: 0
+
 .color-accent
 	color: $accent
 
