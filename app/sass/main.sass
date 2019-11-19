@@ -181,10 +181,10 @@ body
 	.box-border
 		border: solid
 		border-color: $accent !important
-		border-width: 4px
+		border-width: 5px
 		background: linear-gradient(135deg, rgba(255,255,200,0), rgba(255,255,255,55))
 	.box-border-text
-		padding: 15px 15px 0 0
+		padding: 13px 15px 0 0
 	.img-sandra
 		position: absolute
 		margin-left: 86px
@@ -192,12 +192,31 @@ body
 		z-index: 100
 
 #reviews-section
-	.carousel-item
-		min-width: 350px
-		min-height: 350px
-		border: solid 2px black
+	p
+		&:first-child
+			margin-top: 10px
+	h2
+		text-transform: uppercase
+		padding-top: 77px
+		margin-bottom: 70px
+		font-size: 28px
+	.img-reviews
+		width: 215px !important
+		height: auto
+		border-top: solid $accent 5px
+		border-left: solid $accent 5px
+	.left-column-reviews
+		text-align: right
+		text-align: -webkit-right
+	.user-name
+		font-family: $din-alternate-bold
+		display: inline-block
+		color: white
+		background-color: $accent
+		padding: 5px 20px
+		margin-top: 5px
 	.slick-prev
-		left: -1px
+		left: -25px
 		display: inline-block
 		// overflow: visible
 		font-size: 0
@@ -214,14 +233,14 @@ body
 		outline: none
 		background: transparent
 		&:before
-			content: '←'
+			content: '<'
 			font-family: 'slick'
-			font-size: 20px
+			font-size: 30px
 			line-height: 1
 			opacity: .75
 			color: black
 	.slick-next
-		right: -1px
+		right: -25px
 		display: inline-block
 		// overflow: visible
 		font-size: 0
@@ -238,9 +257,9 @@ body
 		outline: none
 		background: transparent
 		&:before
-			content: '→'
+			content: '>'
 			font-family: 'slick'
-			font-size: 20px
+			font-size: 30px
 			line-height: 1
 			opacity: .75
 			color: black
@@ -256,9 +275,9 @@ body
 			border: none
 			border-radius: 50%
 			font-size: 0
-			height: 15px
-			width: 15px
-			margin: 5px
+			height: 11px
+			width: auto
+			margin: 10px
 			&:focus
 				outline: 0
 
