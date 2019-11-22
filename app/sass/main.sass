@@ -9,6 +9,9 @@
 	background-color: $accent
 	color: #fff
 
+html
+	scroll-behavior: smooth
+
 body
 	font-size: 18px
 	min-width: 320px
@@ -103,7 +106,7 @@ body
 	background-position: center
 	background-repeat: no-repeat
 	width: auto
-	height: 1019px
+	height: 889px
 	h2
 		text-transform: uppercase
 		margin-bottom: 44px
@@ -124,11 +127,11 @@ body
 
 #some-section
 	padding: 0
-	background-image: url('../img/_src/Screen-5-bgr.png')
+	background-image: url('../img/_src/Screen-5-bgr.jpg')
 	background-position: right
 	background-repeat: no-repeat
 	width: auto
-	height: 705px
+	height: 1175px
 	img
 		height: 77px
 		width: auto
@@ -197,10 +200,21 @@ body
 	background-position: right
 	background-repeat: no-repeat
 	width: auto
-	height: 735px
+	height: 955px
+	.reviews-social-link
+		color: $facebook-color
+		padding-left: 6px
+		display: inline-block
+		outline: none
+		&:focus
+			text-decoration: none
 	p
 		&:first-child
 			margin-top: 10px
+	.reviews-social-img
+		width: 25px
+		height: auto
+		display: inline-block
 	h2
 		text-transform: uppercase
 		padding-top: 77px
@@ -417,24 +431,67 @@ body
 		text-align: center
 		max-width: 70%
 
-#payment-section
-	padding: 0
-	background-image: url('../img/_src/screen-12-bgr.jpg')
-	background-position: center
-	background-repeat: no-repeat
-	width: auto
-	height: 938px
-	h2
+#contact-section
+	padding-top: 100px
+	padding-bottom: 100px
+	.main_form
+	button
+		border: none
+		color: #fff
+		line-height: 40px
+		padding: 0 25px
+		font-size: 13px
 		text-transform: uppercase
-		padding-top: 60px
-		padding-bottom: 50px
-		font-size: 28px
-	p
-		font-size: 22px
-	.payments-cards
-		margin-top: 65px
-		img
-			margin-bottom: 35px
+		font-weight: 600
+		margin-top: 10px
+		float: right
+		cursor: pointer
+		&:hover
+			color: $accent
+.form-group
+	display: block
+	margin-bottom: 20px
+	.color_element
+		font-weight: 700
+		font-size: 18px
+	.text-danger
+		font-size: 11px
+		margin-top: 5px
+		display: block
+		ul,
+		li
+			margin: 0
+			padding: 0
+			list-style-type: none
+	input,
+	textarea
+		display: block
+		width: 100%
+		border: 1px solid #ccc
+		margin-top: 5px
+		line-height: 40px
+		text-indent: 12px
+		font-size: 12px
+		background-color: transparent
+
+// #payment-section
+// 	padding: 0
+// 	background-image: url('../img/_src/screen-12-bgr.jpg')
+// 	background-position: center
+// 	background-repeat: no-repeat
+// 	width: auto
+// 	height: 938px
+// 	h2
+// 		text-transform: uppercase
+// 		padding-top: 60px
+// 		padding-bottom: 50px
+// 		font-size: 28px
+// 	p
+// 		font-size: 22px
+// 	.payments-cards
+// 		margin-top: 65px
+// 		img
+// 			margin-bottom: 35px
 
 #footer
 	background-color: $dark-gray-color !important
