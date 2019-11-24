@@ -48,6 +48,7 @@ $(document).ready(function(){
 		speed: 300,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dotsClass: 'slick-dots'
+		dotsClass: 'slick-dots',
+		adaptiveHeight: true
 	});
 });
