@@ -51,7 +51,7 @@ body
 		top: 85px
 	.img-slash-sm
 		width: 15px
-		height: 32px
+		height: 35px
 		margin: 2px 13px 0 0
 	.img-slash-big
 		width: 20px
@@ -125,7 +125,7 @@ body
 		counter-increment: my-counter
 		&:before
 			content: counter(my-counter) ". "
-			font-family: $din-alternate-bold
+			font-family: $din-pro-bold
 
 #some-section
 	padding: 0
@@ -153,6 +153,14 @@ body
 			padding-left: 26px
 	ul
 		list-style-type: decimal
+	ul
+		list-style: none
+		counter-reset: my-counter
+	li
+		counter-increment: my-counter
+		&:before
+			content: counter(my-counter) ". "
+			font-family: $din-pro-bold
 	.li-color-bullet
 		list-style: none
 		li
@@ -162,7 +170,7 @@ body
 				content: "•"
 				display: inline-block
 				font-size: 40px
-				margin-top: -15px
+				margin-top: -18px
 				position: absolute
 				left: 30px
 				color: $accent
@@ -560,11 +568,11 @@ h1
 
 h2
 	font-size: 26px
-	font-family: $din-alternate-bold
+	font-family: $din-pro-bold
 
 h3
 	font-size: 18px
-	font-family: $din-alternate-bold
+	font-family: $din-pro-bold
 
 b, strong
 	font-weight: bold
