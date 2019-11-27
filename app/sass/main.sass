@@ -13,6 +13,7 @@ html
 	scroll-behavior: smooth
 
 body
+	background-image: none !important
 	font-size: 18px
 	min-width: 320px
 	position: relative
@@ -20,7 +21,7 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
-	background-color: $gray-color
+	background-color: $gray-color !important
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -28,6 +29,17 @@ body
 			border-color: red
 		&:required:valid
 			border-color: green
+
+header
+	#site-header
+		display: none !important
+
+footer
+	#site-footer
+		display: none !important
+
+.elementor
+	display: none !important
 
 .media-main-bg
 	display: none
@@ -189,7 +201,7 @@ body
 	height: 745px
 	z-index: 1
 	p
-		margin-bottom: 1.28rem
+		margin-bottom: 0.95rem
 	.img-logo
 		min-width: 193px
 		height: auto
@@ -215,8 +227,31 @@ body
 	.img-sandra
 		position: absolute
 		margin-left: 86px
-		margin-top: 97px
+		margin-top: 96px
 		z-index: 100
+
+#about-me
+	h2
+		text-transform: uppercase
+		margin-top: 65px
+		margin-bottom: 35px
+		font-size: 28px
+	.li-color-bullet
+		margin-top: 35px
+		list-style: none
+		li
+			padding-bottom: 15px
+			display: list-item
+			padding-right: 15px
+			&:before
+				content: "•"
+				display: inline-block
+				font-size: 40px
+				margin-top: -14px
+				position: absolute
+				left: 30px
+				color: $accent
+
 
 #reviews-section
 	padding: 0
@@ -334,6 +369,8 @@ body
 	background-repeat: no-repeat
 	width: auto
 	height: 891px
+	p
+		text-align: left
 	.goal-first-text
 		margin-top: 15px
 		margin-left: 10px
@@ -371,6 +408,7 @@ body
 
 #faq-section
 	background-color: white
+	padding-bottom: 60px
 	h2
 		font-size: 28px
 		font-family: $din-pro-bold
@@ -421,7 +459,7 @@ body
 	background-position: center
 	background-repeat: no-repeat
 	width: auto
-	height: 1646px
+	height: auto
 	h2
 		text-transform: uppercase
 		font-size: 28px
@@ -458,8 +496,9 @@ body
 				font-size: 40px
 				line-height: 1.7
 	.options-btn
-		text-align: center
-		max-width: 70%
+		.btn
+			padding: 7px 33px 7px 33px
+			text-align: center
 
 #contact-section
 	padding-top: 100px
