@@ -30,16 +30,9 @@ body
 		&:required:valid
 			border-color: green
 
-header
-	#site-header
-		display: none !important
+.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
 
-footer
-	#site-footer
-		display: none !important
-
-.elementor
-	display: none !important
 
 .media-main-bg
 	display: none
@@ -54,11 +47,12 @@ footer
 	background-color: white
 
 #main-section
-	background-image: url('../img/_src/Screen-1-bgr-min.jpg')
 	background-position: center
 	background-repeat: no-repeat
 	width: auto
 	height: 637px
+	&.visible
+		background-image: url('../img/_src/Screen-1-bgr-min.jpg')
 	.main-section-text
 		top: 85px
 	.img-slash-sm
@@ -92,11 +86,13 @@ footer
 
 #secret-section
 	padding: 0
-	background-image: url('../img/_src/Screen-3-bgr-min.jpg')
 	background-position: center
 	background-repeat: no-repeat
 	width: auto
 	height: 752px
+	&.visible
+		background-image: url('../img/_src/Screen-3-bgr-min.jpg')
+
 	h2
 		color: white
 		margin-top: 309px
@@ -116,11 +112,12 @@ footer
 
 #what-awaits-section
 	padding: 0
-	background-image: url('../img/_src/Screen-4-bgr-min.jpg')
 	background-position: center
 	background-repeat: no-repeat
 	width: auto
-	height: 889px
+	height: 889px 
+	&.visible
+		background-image: url('../img/_src/Screen-4-bgr-min.jpg')
 	h2
 		text-transform: uppercase
 		margin-bottom: 44px
@@ -141,11 +138,12 @@ footer
 
 #some-section
 	padding: 0
-	background-image: url('../img/_src/Screen-5-bgr.jpg')
 	background-position: right
 	background-repeat: no-repeat
 	width: auto
 	height: 1175px
+	&.visible
+		background-image: url('../img/_src/Screen-5-bgr.jpg')
 	img
 		height: 77px
 		width: auto
@@ -194,12 +192,13 @@ footer
 
 #why-me-section
 	padding: 0
-	background-image: url('../img/_src/screen-6-bgr.jpg')
 	background-position: right
 	background-repeat: no-repeat
 	width: auto
 	height: 745px
 	z-index: 1
+	&.visible
+		background-image: url('../img/_src/screen-6-bgr.jpg')
 	p
 		margin-bottom: 0.95rem
 	.img-logo
@@ -364,11 +363,12 @@ footer
 
 #goal-section
 	padding: 45px 0 0 0
-	background-image: url('../img/_src/screen-8-bgr.jpg')
 	background-position: right
 	background-repeat: no-repeat
-	width: auto
-	height: 891px
+	width: auto 
+	height: auto
+	&.visible
+		background-image: url('../img/_src/screen-8-bgr.jpg')
 	p
 		text-align: left
 	.goal-first-text

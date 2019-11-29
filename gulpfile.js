@@ -45,6 +45,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
@@ -76,6 +77,12 @@ gulp.task('rsync', function() {
 });
 
 // Images @x1 & @x2 + Compression | Required graphicsmagick (sudo apt update; sudo apt install graphicsmagick)
+gulp.task('placeholder', function() {
+	return gulp.src('app/img/_src/**/*.*')
+	.pipe(imageResize({ width: '10%' }))
+	.pipe(imagemin())
+	.pipe(gulp.dest('app/img/@placeholder/'))
+});
 gulp.task('img1x', function() {
 	return gulp.src('app/img/_src/**/*.*')
 	.pipe(imageResize({ width: '50%' }))
@@ -117,7 +124,7 @@ if (gulpVersion == 3) {
 if (gulpVersion == 4) {
 
 	// Img Processing Task for Gulp 4
-	gulp.task('img', gulp.parallel('img1x', 'img2x'));
+	gulp.task('img', gulp.parallel('img1x', 'img2x','placeholder'));
 
 	gulp.task('watch', function() {
 		gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));

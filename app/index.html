@@ -22,17 +22,23 @@
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#fff">
 	<!-- Custom Browsers Color End -->
-<!-- <script src="https://kit.fontawesome.com/5ffa2dea6e.js" crossorigin="anonymous"></script> -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+	<!-- <link rel="stylesheet" href="css/main.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+
+	<!-- TRD Always use preload to styles -->
+	<link rel="preload" href="css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
+
+	<link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></noscript>
 
 </head>
 
 <body>
 
 	<!-- Main section -->
-	<div id="main-section" class="container">
+	<div id="main-section" class="container lazy-background">
 
 		<div class="row">
 
@@ -125,7 +131,7 @@
 	<!-- END You-can section -->
 
 	<!-- Secret section -->
-	<section id="secret-section" class="container">
+	<section id="secret-section" class="container lazy-background">
 
 		<div class="row">
 			<div class="col-sm-12 col-lg-4 offset-lg-1 media-text-center">
@@ -151,7 +157,7 @@
 	<!-- END Secret section -->
 
 	<!-- What awaits section -->
-	<section id="what-awaits-section" class="container">
+	<section id="what-awaits-section" class="container lazy-background">
 
 		<h2 class="text-center color-accent">Вот, что именно ждет вас на марафоне:</h2>
 
@@ -196,7 +202,7 @@
 	<!-- END What awaits section -->
 
 	<!-- Some section -->
-	<section id="some-section" class="container">
+	<section id="some-section" class="container lazy-background">
 
 		<h2 class="text-center">А так же:</h2>
 
@@ -269,18 +275,25 @@
 	<!-- END Some section -->
 
 	<!-- Why me section -->
-	<section id="why-me-section" class="container">
+	<section id="why-me-section" class="container lazy-background">
 
 		<div class="col-sm-12 text-center media-main-bg">
 			<h2 class="color-accent">Почему я веду этот марафон</h2>
-		</div>
+		</div> 
 		
 		<div>
-		<img class="img-sandra" src="img/_src/screen-6-sandra.png" alt="Sandra Summer">
+			<!-- <img class="img-sandra" src="img/_src/screen-6-sandra.png" alt="Sandra Summer"> -->
+			<img 
+			src="img/@placeholder/screen-6-sandra.png" 
+			data-src="img/@2x/screen-6-sandra.png" 
+			data-srcset="img/@2x/screen-6-sandra.png 2x" 
+			class="lazy img-sandra" alt="">
+		<!-- </div> -->
+		<!-- <div> -->
+		<!-- <div> -->
+			<img src="img/@placeholder/screen-6-bgr-mob.png" data-src="img/@1x/screen-6-bgr-mob.png" data-srcset="img/@1x/screen-6-bgr-mob.png 1x, img/@2x/screen-6-bgr-mob.png 2x" class="lazy media-main-bg" alt="">
 		</div>
-		<div>
-		<img src="img/_src/screen-6-bgr-mob.png" class="media-main-bg" alt="">
-		</div>
+		
 
 		<div class="row">
 
@@ -335,7 +348,12 @@
 				<h2 class="text-center color-accent">Еще немного обо мне</h2>
 			</div>
 			<div class="col-10 offset-1 col-lg-8 offset-lg-2">
-				<img class="img-responsive" src="img/_src/screen-61-1200-min.jpg" alt="">
+				<img 
+				src="img/@placeholder/screen-61-1200-min.jpg" 
+				data-src="img/@1x/screen-61-1200-min.jpg" 
+				data-srcset="img/@1x/screen-61-1200-min.jpg 1x, img/@2x/screen-61-1200-min.jpg 2x" 
+				class="parent lazy img-responsive" alt="">
+				<!-- <img class="img-responsive" src="img/_src/screen-61-1200-min.jpg" alt=""> -->
 			</div>
 			<div class="col-10 offset-1 col-lg-8 offset-lg-2">
 				<ul class="li-color-bullet">
@@ -367,7 +385,19 @@
 						<div class="row">
 							<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
 								<!-- The correct url for embedding YouTube videos is: https://www.youtube.com/embed/VIDEO_ID -->
-								<iframe width="100%" height="345" src="https://youtube.com/embed/pyOVx72622o" frameborder="0" allowfullscreen></iframe>
+								<!-- <iframe width="100%" height="345" src="https://youtube.com/embed/pyOVx72622o" frameborder="0" allowfullscreen></iframe> -->
+
+<iframe
+  width="100%"
+  height="345"
+  src="https://www.youtube.com/embed/pyOVx72622o"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/pyOVx72622o?autoplay=1><img src=https://img.youtube.com/vi/pyOVx72622o/hqdefault.jpg alt=''><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Светояра Качуренко. Женский тренер"
+></iframe>
+
 								<p><span class="user-name">Светояра Качуренко</span>&nbsp;&nbsp;&nbsp;Женский тренер</p>
 							</div>
 						</div>
@@ -377,7 +407,19 @@
 						<div class="row">
 							<div class="col-sm-10 offset-sm-1 col-lg-8 offset-lg-2 text-center">
 								<!-- The correct url for embedding YouTube videos is: https://www.youtube.com/embed/VIDEO_ID -->
-								<iframe width="100%" height="345" src="https://youtube.com/embed/MR96bM_YBcs" frameborder="0" allowfullscreen></iframe>
+								<!-- <iframe width="100%" height="345" src="https://youtube.com/embed/MR96bM_YBcs" frameborder="0" allowfullscreen></iframe> -->
+
+<iframe
+  width="100%"
+  height="345"
+  src="https://www.youtube.com/embed/MR96bM_YBcs"
+  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/MR96bM_YBcs?autoplay=1><img src=https://img.youtube.com/vi/MR96bM_YBcs/hqdefault.jpg alt=''><span>▶</span></a>"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title="Светлана Петрова.Женский коуч"
+></iframe>
+
 								<p><span class="user-name">Светлана Петрова</span>&nbsp;&nbsp;&nbsp;Женский коуч</p>
 							</div>
 						</div>
@@ -602,7 +644,7 @@
 	<!-- END Options Section -->
 
 	<!-- Goal Section -->
-	<section id="goal-section" class="container">
+	<section id="goal-section" class="container lazy-background">
 
 		<div class="row">
 			<div class="col-lg-3 offset-lg-1 text-center">
@@ -656,11 +698,12 @@
 
 	<!-- Do you want Section -->
 	<section id="do-you-want-section" class="container">
-		<img src="img/_src/screen-10-1-img-mob.jpg" class="media-main-bg" alt="">
+		<!-- <img src="img/_src/screen-10-1-img-mob.jpg" class="media-main-bg" alt=""> -->
+		<img src="img/@placeholder/screen-10-1-img-mob.jpg" data-src="img/@1x/screen-10-1-img-mob.jpg" data-srcset="img/@2x/screen-10-1-img-mob.jpg 2x, img/@1x/screen-10-1-img-mob.jpg 1x" class="lazy media-main-bg" alt="">
 
 		<div class="row">
 			<div class="col-lg-6 offset-lg-5">
-				<h2>хотите заявить о себе<br>как о дорогом эксперте? хотите<br>платежеспособных клиентов?</h2>
+				<h2 class="lazy-background">хотите заявить о себе<br>как о дорогом эксперте? хотите<br>платежеспособных клиентов?</h2>
 			</div>
 		</div>
 
