@@ -26,10 +26,16 @@
     <!-- Custom Browsers Color Start -->
     <meta name="theme-color" content="#fff">
     <!-- Custom Browsers Color End -->
-<!-- <script src="https://kit.fontawesome.com/5ffa2dea6e.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.min.css"></noscript>
+
+    <link rel="preload" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"></noscript>
+
+<!-- Pixel code -->
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?162",t.onload=function(){VK.Retargeting.Init("VK-RTRG-432091-6PkyF"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-432091-6PkyF" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- End Pixel code -->
+
     <?php wp_head(); ?>
 
 </head>

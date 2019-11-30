@@ -5,13 +5,66 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.logo_container
+		top: 20px
+		left: 10px
+	#main-section
+		height: 612px
+		background-size: cover
+		.flex
+			img
+				margin-left: 35px
+
+	#secret-section
+		.offset-lg-1
+			margin-left: 48px
+		h2
+			font-size: 24px
+			margin-top: 278px
+		.img-star
+			width: 15px
+			height: 16px
+			margin-right: 15px
+		.second-row
+			left: 20px
+
+	#some-section
+		padding: 0
+		background-position: bottom
+		background-repeat: no-repeat
+		width: auto
+		height: auto
+
+	#why-me-section
+		height: auto
+		p
+			font-size: 16px
+		.img-sandra
+			margin-top: 81px
+
+	#options-section
+		background-position: top
+		.options-btn
+			.btn
+				padding: 7px 18px 7px 18px
+
+	#goal-section
+		.img-frame
+			margin-left: -30px
+		.img-frame-last
+			margin-left: 45px
+
+	#do-you-want-section
+		h2
+			margin-top: 128px
 
 // ≥992px
 +media-breakpoint-down(md)
 	#main-section
-		background-image: none
 		width: 100%
 		height: auto
+		&.visible
+			background-image: none
 		.media-main-bg
 			margin: auto
 		.main-section-text
@@ -70,11 +123,12 @@
 			margin-bottom: 45px
 
 	#secret-section
-		background-image: none
-		background-color: $secret-section-color
 		padding: 0
 		width: auto
 		height: auto
+		&.visible
+			background-image: none
+			background-color: $secret-section-color
 		.media-img-secret
 			margin: auto
 		h2
@@ -274,9 +328,10 @@
 // ≥768px #######################################################################################
 +media-breakpoint-down(sm)
 	#main-section
-		background-image: none
 		width: 100%
 		height: auto
+		&.visible
+			background-image: none
 		.media-main-bg
 			margin: auto
 		.main-section-text
@@ -335,11 +390,12 @@
 			margin-bottom: 45px
 
 	#secret-section
-		background-image: none
-		background-color: $secret-section-color
 		padding: 0
 		width: auto
 		height: auto
+		&.visible
+			background-image: none
+			background-color: $secret-section-color
 		.media-img-secret
 			margin: auto
 		h2

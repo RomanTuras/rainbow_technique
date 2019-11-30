@@ -18,7 +18,7 @@ get_header();
 ?>
 
 <!-- Main section -->
-<div id="main-section" class="container">
+<div id="main-section" class="container lazy-background">
 
     <div class="row">
 
@@ -70,7 +70,7 @@ get_header();
 <!-- END You-can section -->
 
 <!-- Secret section -->
-<section id="secret-section" class="container">
+<section id="secret-section" class="container lazy-background">
 
     <div class="row">
         <?php
@@ -88,7 +88,7 @@ get_header();
 <!-- END Secret section -->
 
 <!-- What awaits section -->
-<section id="what-awaits-section" class="container">
+<section id="what-awaits-section" class="container lazy-background">
         <?php
         $cat_name = "rainbow-what-awaits";
         $term = get_term_by('name', $cat_name, 'category');
@@ -102,7 +102,7 @@ get_header();
 <!-- END What awaits section -->
 
 <!-- Some section -->
-<section id="some-section" class="container">
+<section id="some-section" class="container lazy-background">
         <?php
         $cat_name = "rainbow-some-section";
         $term = get_term_by('name', $cat_name, 'category');
@@ -116,7 +116,7 @@ get_header();
 <!-- END Some section -->
 
 <!-- Why me section -->
-<section id="why-me-section" class="container">
+<section id="why-me-section" class="container lazy-background">
     <?php
     $cat_name = "rainbow-why-me";
     $term = get_term_by('name', $cat_name, 'category');
@@ -172,7 +172,7 @@ get_header();
 <!-- END Options Section -->
 
 <!-- Goal Section -->
-<section id="goal-section" class="container">
+<section id="goal-section" class="container lazy-background">
     <?php
     $cat_name = "rainbow-goal";
     $term = get_term_by('name', $cat_name, 'category');
@@ -187,7 +187,7 @@ get_header();
 
 <!-- Do you want Section -->
 <section id="do-you-want-section" class="container">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/_src/screen-10-1-img-mob.jpg" class="media-main-bg" alt="">
+    <img src="img/@placeholder/screen-10-1-img-mob.jpg" data-src="img/@1x/screen-10-1-img-mob.jpg" data-srcset="img/@2x/screen-10-1-img-mob.jpg 2x, img/@1x/screen-10-1-img-mob.jpg 1x" class="lazy media-main-bg" alt="">
 
     <?php
     $cat_name = "rainbow-do-you-want";
