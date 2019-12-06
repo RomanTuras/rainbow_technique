@@ -3,7 +3,8 @@
 <br>
 _parent theme: TwentyTwenty_
 <br>
-<b>This is a landing page with main title: Rainbow Technique</b>
+<br>
+This is a landing page with main title: Rainbow Technique
 <br>
 <br>
 **Samples of section:**
